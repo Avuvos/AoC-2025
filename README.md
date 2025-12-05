@@ -11,11 +11,11 @@ Each day includes:
 
 | Day | Part 1 | Part 2 | Code | Explanation |
 |-----|--------|--------|------|-------------|
-| 1   | ⭐     | ⭐     | [main.py](day01/main.py) | [SOLUTION.md](day01/SOLUTION.md) |
-| 2   | ⭐     | ⭐     | [main.py](day02/main.py) | [SOLUTION.md](day02/SOLUTION.md) |
-| 3   | ⭐     | ⭐     | [main.py](day03/main.py) | [SOLUTION.md](day03/SOLUTION.md) |
-| 4   | ⭐     | ⭐     | [main.py](day04/main.py) | [SOLUTION.md](day04/SOLUTION.md) |
-| 5   | ⭐     | ⭐     | [main.py](day05/main.py) | [SOLUTION.md](day05/SOLUTION.md) |
+| 1   | ⭐     | ⭐     | [main.py](day01/main.py) | [README.md](day01/) |
+| 2   | ⭐     | ⭐     | [main.py](day02/main.py) | [README.md](day02/) |
+| 3   | ⭐     | ⭐     | [main.py](day03/main.py) | [README.md](day03/) |
+| 4   | ⭐     | ⭐     | [main.py](day04/main.py) | [README.md](day04/) |
+| 5   | ⭐     | ⭐     | [main.py](day05/main.py) | [README.md](day05/) |
 
 ## Running Solutions
 
