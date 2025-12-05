@@ -8,7 +8,7 @@ Track the `max_digit` seen so far. For each new digit, try forming a pair with `
 
 ### Time Complexity
 
-**O(n × m)** where n = number of banks, m = length of each bank.
+`O(n × m)` where n = number of banks, m = length of each bank.
 
 ## Part 2
 
@@ -18,4 +18,4 @@ Start with the first 12 digits. For each new digit, try replacing each position 
 
 ### Time Complexity
 
-**O(n × m × k)** where k = 12. For each digit in each bank, we try k possible replacements.
+`O(n × m × k)` where k = 12. For each digit in each bank, we try k possible replacements.

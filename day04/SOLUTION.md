@@ -12,7 +12,7 @@ For each `@` cell, count how many neighbors are also `@`. If fewer than 4, count
 
 ### Time Complexity
 
-**O(n × m)** where n, m = grid dimensions. Each cell checked in O(1) time.
+`O(n × m)` where n, m = grid dimensions. Each cell checked in `O(1)` time.
 
 ## Part 2
 
@@ -20,4 +20,4 @@ Repeat part 1 in a loop: remove all `@` cells with fewer than 4 neighbors, then 
 
 ### Time Complexity
 
-**O(n × m × k)** where k = number of iterations until stable. Worst case k ≈ max(n, m) if cells peel away layer by layer.
+`O(n × m × k)` where k = number of iterations until stable. Worst case k ≈ max(n, m) if cells peel away layer by layer.

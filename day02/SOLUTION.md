@@ -10,7 +10,7 @@ Sum up all valid numbers.
 
 ### Time Complexity
 
-**O(n × m)** where n = total numbers across all ranges, m = max digits per number.
+`O(n × m)` where n = total numbers across all ranges, m = max digits per number.
 
 ## Part 2
 
@@ -20,4 +20,4 @@ Loop over all divisors `d` of the string length. If the first `d` characters rep
 
 ### Time Complexity
 
-**O(n × m)** — same as part 1, checking divisors is O(m) per number.
+`O(n × m)` — same as part 1, checking divisors is `O(m)` per number.

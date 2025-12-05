@@ -10,7 +10,7 @@ Count how many times we land exactly on position `0`.
 
 ### Time Complexity
 
-**O(n)** where n = number of lines given, each line is processed in O(1) time.
+`O(n)` where n = number of lines given, each line is processed in `O(1)` time.
 
 ## Part 2
 
@@ -22,4 +22,4 @@ For large counts, we may cross zero multiple times in a single operation—track
 
 ### Time Complexity
 
-**O(n)** — same as part 1.
+`O(n)` — same as part 1.

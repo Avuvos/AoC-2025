@@ -6,9 +6,9 @@ Brute force: for each ingredient, scan all intervals to check if any contains it
 
 ### Time Complexity
 
-**O(n × m)** where n = number of ingredients, m = number of intervals.
+`O(n × m)` where n = number of ingredients, m = number of intervals.
 
-*Could be optimized to O((n + m) × log m)* by sorting intervals and binary searching for the smallest left value ≤ ingredient.
+*Could be optimized to `O((n + m) × log m)`* by sorting intervals and binary searching for the smallest left value ≤ ingredient.
 
 ## Part 2
 
@@ -22,4 +22,4 @@ Sum up the lengths of all merged intervals.
 
 ### Time Complexity
 
-**O(m log m)** for sorting, then O(m) for merging.
+`O(m log m)` for sorting, merging is `O(m)` after that, so total `O(m log m)`.
