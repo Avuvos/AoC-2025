@@ -2,10 +2,10 @@ from pathlib import Path
 
 
 def solve_part1(data: str) -> int:
-    input_data = data.split(',')
+    ranges = data.split(',')
 
     result = 0
-    for rng in input_data:
+    for rng in ranges:
         left, right = rng.split('-')
         left = int(left)
         right = int(right)
@@ -22,10 +22,10 @@ def solve_part1(data: str) -> int:
 
 
 def solve_part2(data: str) -> int:
-    input_data = data.split(',')
+    ranges = data.split(',')
 
     result = 0
-    for rng in input_data:
+    for rng in ranges:
         left, right = rng.split('-')
         left = int(left)
         right = int(right)

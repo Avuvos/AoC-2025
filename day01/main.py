@@ -2,11 +2,11 @@ from pathlib import Path
 
 
 def solve_part1(data: str) -> int:
-    input_data = data.splitlines()
+    operations = data.splitlines()
 
     position = 50
     result_password = 0
-    for operation in input_data:
+    for operation in operations:
         direction = operation[0]
         count = int(operation[1:])
 
@@ -24,11 +24,11 @@ def solve_part1(data: str) -> int:
 
 
 def solve_part2(data: str) -> int:
-    input_data = data.splitlines()
+    operations = data.splitlines()
 
     position = 50
     result_password = 0
-    for operation in input_data:
+    for operation in operations:
         direction = operation[0]
         count = int(operation[1:])
         times_of_rotation = count // 100

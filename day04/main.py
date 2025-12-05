@@ -25,6 +25,7 @@ def solve_part1(data: str) -> int:
 def solve_part2(data: str) -> int:
     grid = data.splitlines()
     grid = [[c for c in row] for row in grid]
+
     result = 0
     n, m = len(grid), len(grid[0])
     while True:

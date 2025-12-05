@@ -2,11 +2,11 @@ from pathlib import Path
 
 
 def solve_part1(data: str) -> int:
-    input_data = data.splitlines()
+    banks = data.splitlines()
 
     result = 0
 
-    for bank in input_data:
+    for bank in banks:
         max_digit = "0"
         best = 0
         for i, c in enumerate(bank):
@@ -20,12 +20,12 @@ def solve_part1(data: str) -> int:
 
 
 def solve_part2(data: str) -> int:
-    input_data = data.splitlines()
+    banks = data.splitlines()
 
     result = 0
     LEN = 12
 
-    for bank in input_data:
+    for bank in banks:
         max_digits = [c for c in bank[0:LEN]]
         best = int("".join(max_digits))
         for cur_digit in bank[LEN:]:
