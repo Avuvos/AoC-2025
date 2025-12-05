@@ -3,3 +3,6 @@ __pycache__/
 .venv/
 .env
 .idea
+
+# AoC puzzle inputs (copyrighted by Eric Wastl)
+**/input.txt
