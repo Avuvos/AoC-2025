@@ -5,46 +5,46 @@ def solve_part1(data: str) -> int:
     operations = data.splitlines()
 
     position = 50
-    result_password = 0
+    result = 0
     for operation in operations:
         direction = operation[0]
-        count = int(operation[1:])
+        steps = int(operation[1:])
 
         if direction == "R":
-            position = (position + count) % 100
+            position = (position + steps) % 100
         elif direction == "L":
-            position = (position - count) % 100
+            position = (position - steps) % 100
         else:
             raise ValueError("Unexpected direction")
 
         if position == 0:
-            result_password += 1
+            result += 1
 
-    return result_password
+    return result
 
 
 def solve_part2(data: str) -> int:
     operations = data.splitlines()
 
     position = 50
-    result_password = 0
+    result = 0
     for operation in operations:
         direction = operation[0]
-        count = int(operation[1:])
-        times_of_rotation = count // 100
+        steps = int(operation[1:])
+        cycles_count = steps // 100
 
         if direction == "R":
-            position = position + count
+            position = position + steps
         elif direction == "L":
-            position = position - count
+            position = position - steps
         else:
             raise ValueError("Unexpected direction")
 
         if position >= 100 or position <= 0:
-            result_password += max(1, times_of_rotation)
+            result += max(1, cycles_count)
         position = position % 100
 
-    return result_password
+    return result
 
 
 if __name__ == "__main__":
