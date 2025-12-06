@@ -7,6 +7,7 @@ def solve_part1(data: str) -> int:
     grid = [row.split() for row in data.splitlines()]
     n, m = len(grid), len(grid[0])
     operations = grid[-1]
+
     result = 0
     for col in range(m):
         nums = [int(grid[row][col]) for row in range(n - 1)]

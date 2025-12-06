@@ -3,7 +3,7 @@
 My solutions for [Advent of Code 2025](https://adventofcode.com/2025) in Python.
 
 Each day includes:
-- Clean, readable Python code - some of it still requires a bit of refactoring tho.
+- Solution in Python.
 - A detailed explanation of the approach
 - Time complexity analysis
 

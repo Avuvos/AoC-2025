@@ -3,7 +3,7 @@ from pathlib import Path
 
 def solve_part1(data: str) -> int:
     top, bottom = data.split("\n\n")
-    ranges = [tuple(map(int, l.split('-'))) for l in top.splitlines()]
+    ranges = list(tuple(map(int, l.split('-'))) for l in top.splitlines())
     ingredients = [int(l) for l in bottom.splitlines()]
 
     result = 0
@@ -18,7 +18,7 @@ def solve_part1(data: str) -> int:
 
 def solve_part2(data: str) -> int:
     top, _ = data.split("\n\n")
-    ranges = sorted([tuple(map(int, l.split('-'))) for l in top.splitlines()])
+    ranges = sorted(list(tuple(map(int, l.split('-'))) for l in top.splitlines()))
     merged = []
     for l, r in ranges:
         # No intervals or disjoint
@@ -28,8 +28,7 @@ def solve_part2(data: str) -> int:
         # Contained or overlaps
         merged[-1][1] = max(merged[-1][1], r)
 
-    result = sum(r - l + 1 for l, r in merged)
-    return result
+    return sum(r - l + 1 for l, r in merged)
 
 
 if __name__ == "__main__":
