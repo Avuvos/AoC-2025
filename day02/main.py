@@ -6,9 +6,7 @@ def solve_part1(data: str) -> int:
 
     result = 0
     for rng in ranges:
-        left, right = rng.split('-')
-        left = int(left)
-        right = int(right)
+        left, right = map(int, rng.split('-'))
 
         for x in range(left, right + 1):
             sx = str(x)
@@ -26,19 +24,18 @@ def solve_part2(data: str) -> int:
 
     result = 0
     for rng in ranges:
-        left, right = rng.split('-')
-        left = int(left)
-        right = int(right)
+        left, right = map(int, rng.split('-'))
 
         for x in range(left, right + 1):
             sx = str(x)
-            lenx = len(sx)
-            for d in range(1, lenx // 2 + 1):
-                if lenx % d == 0:
-                    x0 = sx[0: d]
-                    if all(x0 == sx[i: i + d] for i in range(0, lenx - d + 1, d)):
-                        result += x
-                        break
+            len_x = len(sx)
+            for d in range(1, len_x // 2 + 1):
+                if len_x % d != 0:
+                    continue
+                x0 = sx[0: d]
+                if all(x0 == sx[i: i + d] for i in range(0, len_x - d + 1, d)):
+                    result += x
+                    break
 
     return result
 
