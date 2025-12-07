@@ -16,8 +16,7 @@ def solve_part1(data: str) -> int:
             return 1 + traverse(i + 1, j + 1) + traverse(i + 1, j - 1)
         return traverse(i + 1, j)
 
-    result = traverse(0, m // 2)
-    return result
+    return traverse(0, m // 2)
 
 
 def solve_part2(data: str) -> int:
@@ -34,8 +33,7 @@ def solve_part2(data: str) -> int:
             return traverse(i + 1, j + 1) + traverse(i + 1, j - 1)
         return traverse(i + 1, j)
 
-    result = traverse(0, m // 2)
-    return result
+    return traverse(0, m // 2)
 
 
 if __name__ == "__main__":
