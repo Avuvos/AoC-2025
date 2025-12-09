@@ -68,7 +68,7 @@ def solve_part2(data: str) -> int:
     nx, ny = len(xs) + 2, len(ys) + 2
 
     def compress(p: tuple[int, int]) -> tuple[int, int]:
-        return (x_to_compressed[p[0]], y_to_compressed[p[1]])
+        return x_to_compressed[p[0]], y_to_compressed[p[1]]
 
     grid = [[0] * nx for _ in range(ny)]
     compressed_points = [compress(p) for p in points]
