@@ -4,7 +4,7 @@ from pathlib import Path
 
 
 
-def build_graph(data: str) -> dict:
+def build_graph(data: str) -> dict[str, list[str]]:
     graph = defaultdict(list)
     for line in data.splitlines():
         node, neighbors = line.split(": ")
@@ -19,10 +19,7 @@ def solve_part1(data: str) -> int:
     def dfs(node: str) -> int:
         if node == "out":
             return 1
-        paths = 0
-        for neighbor in graph[node]:
-            paths += dfs(neighbor)
-        return paths
+        return sum(dfs(neighbor) for neighbor in graph[node])
 
     return dfs("you")
 
@@ -33,10 +30,7 @@ def solve_part2(data: str) -> int:
     def dfs(node: str, fft: bool, dac: bool) -> int:
         if node == "out":
             return 1 if (fft and dac) else 0
-        paths = 0
-        for neighbor in graph[node]:
-            paths += dfs(neighbor, fft or neighbor == "fft", dac or neighbor == "dac")
-        return paths
+        return sum(dfs(neighbor, fft or neighbor == "fft", dac or neighbor == "dac") for neighbor in graph[node])
 
     return dfs("svr", False, False)
 
